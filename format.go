@@ -215,7 +215,7 @@ func (this *FmtCtx) AddStreamWithCodeCtx(codeCtx *CodecCtx) (*Stream, error) {
 
 	// Create Video stream in output context
 	if ost = this.NewStream(codeCtx.Codec()); ost == nil {
-		return nil, errors.New(fmt.Sprintf("unable to create stream in context:filename:", this.Filename))
+		return nil, errors.New(fmt.Sprintf("unable to create stream in context:filename: %s", this.Filename))
 	}
 	defer Release(ost)
 

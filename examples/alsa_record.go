@@ -88,7 +88,7 @@ func main() {
 
 	ost := outputCtx.NewStream(codec)
 	if ost == nil {
-		log.Fatal("Unable to create stream for [%s]\n", codec.LongName())
+		log.Fatalf("Unable to create stream for [%s]\n", codec.LongName())
 	}
 	defer Release(ost)
 

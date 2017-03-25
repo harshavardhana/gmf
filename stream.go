@@ -46,7 +46,7 @@ func (this *Stream) CodecCtx() *CodecCtx {
 	// and it should be decoder.
 	c, err := FindDecoder(int(this.avStream.codec.codec_id))
 	if err != nil {
-		panic(fmt.Sprintf("unable to initialize codec for stream '%d', error:", this.Index(), err))
+		panic(fmt.Sprintf("unable to initialize codec for stream '%d', error: %s", this.Index(), err))
 	}
 
 	this.cc = &CodecCtx{

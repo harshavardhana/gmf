@@ -27,7 +27,6 @@ type Sample struct {
 }
 
 func NewSample(nbSamples, nbChannels int, format SampleFmt) error {
-	panic("This stuff is unfinished.")
 	this := &Sample{format: format}
 
 	if ret := int(C.av_samples_alloc_array_and_samples(
